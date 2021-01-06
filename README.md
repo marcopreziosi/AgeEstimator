@@ -57,13 +57,23 @@ NOTE: our_test_2000_160.csv si basa sulle immagini della cartella di train che n
 │   ├── generate_csv_remaining_for_test.py.   --> Generazione del csv per le immagini della cartella "train" del dataset VGG-Face2 non utilizzate per l'addestramento della rete
 
 ├── csv_folder
-│   ├── train.age_detected_vgg.csv              --> Csv delle annotazioni sulla cartella "train"
-│   ├── annotation_vgg.csv                      --> Csv delle annotazioni per eseguire il crop sul train
-│   ├── test.detected.csv                       --> Csv delle annotazioni per eseguire il crop sul "test"
 │   ├── csv_training_reorganized_2000_160.csv   --> Csv del training set riorganizzato
 │   ├── validation_2000_160.csv                 --> Csv del validation_set
 │   ├── dataset_complete_2000_160.csv           --> Csv del dataset completo utilizzato
 ```
+File presenti sul link drive inviato per email:
+```
+├── csv_folder_remaining
+│   ├── train.age_detected_vgg.csv              --> Csv delle annotazioni sulla cartella "train"
+│   ├── annotation_vgg.csv                      --> Csv delle annotazioni per eseguire il crop sul train 
+│   ├── test.detected.csv                       --> Csv delle annotazioni per eseguire il crop sul "test"
+
+├── Dataset
+│   ├── dataset_160.h5                          --> Dataset completo
+│   ├── label_160.h5                            --> Labels
+```
+
+
 
 NOTE: la notazione "2000_160" sta ad indicare che i file sono riferiti al dataset generato come specificato nella documentazione. 
 
