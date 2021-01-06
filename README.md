@@ -36,6 +36,7 @@ NOTE: our_test_2000_160.csv si basa sulle immagini della cartella di train che n
 ```
 ├── presentazione_gruppo8.pptx
 ├── relazione_gruppo8.pdf
+├── GRUPPO_08.csv
 ```
 # Struttura del progetto
 ```
