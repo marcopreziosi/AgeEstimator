@@ -17,6 +17,7 @@ python3 csv_test_gruppo8.py --dir /Dataset/VGG/test/ --annotation /csv_folder/te
 --net: Modello della rete
 --csv: Nome del csv da generare 
 ```
+NOTA BENE: Nel file "test.detected.csv" abbiamo riscontrato l'assenza delle immagini listate nel file "immagini_assenti.txt", per cui non è stato possibile effettuare il crop e quindi il test  
 
 # Comandi per lanciare lo script usato per valutare le performance della rete
 
