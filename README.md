@@ -1,5 +1,4 @@
-# Marco Preziosi - Stefano Saldutti - Salvatore Reina - Bruno Vento 
-# Progetto Artificial Vision gruppo 8
+# Marco Preziosi
 
 Il file di addestramento è "gruppo8_train_mobilenet.ipynb".
 Il modello usato per la valutazione delle performance è "gruppo8_mobilenet.h5"
