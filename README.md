@@ -1,8 +1,13 @@
-# Marco Preziosi
+## Overview
+Lo scopo del progetto è quello di realizzare una rete neurale per la stima dell’età di una persona. Per questo scopo, è stato addestrato un classificatore.
 
-Il file di addestramento è "gruppo8_train_mobilenet.ipynb".
-Il modello usato per la valutazione delle performance è "gruppo8_mobilenet.h5"
+## Descrizione della soluzione
+L’architettura della rete si basa su Fine Tuning della rete MobilenetV2 con input size pari a 160x160, partendo dai pesi ottenuti su “imagenet”. Sia la tipologia di rete sia l’input size usata sono state scelte per ottenere un buon compromesso fra velocità di elaborazione e performance. Una rete con input size più grande avrebbe migliorato le performance del sistema, a discapito del tempo richiesto. Per quanto riguarda la rete, invece, la scelta è ricaduta su MobilenetV2 in quanto ha una dimensione piccola, bassa latenza e per soddisfare i vincoli di risorse di una varietà di casi d'uso, rispetto ad altre reti più “pesanti”.
+Per adattare il sistema al nostro scopo, l’ultimo livello della rete MobilenetV2 è stato sostituito con 2 strati densi di 512 e 128 neuroni ciascuno (con funzione di attivazione “relu”), entrambi seguiti da uno strato di Dropout impostato a 0.20, e infine con un ultimo strato denso con funzione di attivazione “softmax”, costituito da 101 neuroni, uno per ogni classe da predire. I 2 strati densi che precedono l’ultimo costituito da 101 classi sono stati inseriti affinché la rete possa sfruttare e combinare in modo appropriato le feature estratte dalla CNN MobilenetV2.
+La funzione di costo scelta è la “categorical cross-entropy”, in quanto si adatta bene al task di classificazione multi-classe. Ogni probabilità di classe predetta viene confrontata con l'output 0 o 1 desiderato della classe effettiva e viene calcolato una perdita che penalizza la probabilità in base a quanto è distante dal valore atteso effettivo. Questa funzione di costo richiede che le labels siano codificate in one-hot encoding.
 
+## Descrizione dell'implementazione
+La descrizione dettagliata dell'implementazione si può trovare nel file: "relazione_gruppo8.pdf"
 
 ## Comandi per lanciare la generazione del cvs GRUPPO_08.csv
 Dalla cartella dove si trova il file "csv_test_gruppo8.py" lanciare il comando:
